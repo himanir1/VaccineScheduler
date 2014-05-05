@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+
+  <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="29dp"
+        android:text="@string/birth_date"
+        android:textColor="@color/blue"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="16dp"
+        android:textSize="28sp"
+        android:text="Result" />    
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="50dp"
+        android:text="Gender"
+        android:textColor="@color/blue"
+        android:textSize="25sp" /> 
+
+   
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_alignTop="@+id/radioGroup1"
+        android:text="Current Date"
+        android:textColor="@color/blue"
+        android:textSize="25sp" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="32dp" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="15dp"
+            android:text="Male"
+            android:textColor="@color/blue"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_below="@+id/radioButton1"
+            android:layout_marginTop="20dp"
+            android:text="Female"
+            android:textColor="@color/blue"
+            android:textSize="25sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/button2"
+        android:text="Date of birth" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/radioSex"
+        android:onClick="sendMessage"
+        android:text="Next" />
+
+</RelativeLayout>
